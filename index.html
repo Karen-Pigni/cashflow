@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css ">
+    <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <link rel="stylesheet " href="./css/style.css ">
     <title>CashFlow</title>
 </head>
-<body>
-  <h1>hola mundo</h1>
-
-
-
-    <script src="./js/main.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>  
+<body class="bg-dark ">
+<div class="container-fluid ">
+  <h1 class="nombreApp m-4 text-light ">Gastos App</h1>
+  <div class="row bg-primary ">
+    <div class="col-5 bg bg-secondary p-4 ">
+      <form>
+        <div class="form-group ">
+          <label for="monto " class="text-light ">Monto</label>
+          <input type="number " class="form-control " id="monto " required>
+        </div>
+        <div class="form-group ">
+          <label for="desc " class="text-light ">Descripcion</label>
+          <input type="text " class="form-control " id="desc " required>
+        </div>
+        <div class="form-group " >
+          <label for="fecha " class="text-light ">Fecha</label>
+          <input type="date " class="form-control " id="fecha " required>
+        </div>
+        <div class="form-group ">
+          <label class="my-1 mr-2 text-light " for="select ">Tipo</label>
+          <select class="custom-select my-1 mr-sm-2 " id="select " required>
+            <option selected>seleccionar...</option>
+            <option value="1 ">Ingreso</option>
+            <option value="2 ">Egreso</option>
+          </select>
+        </div>
+        <button type="submit " class="btn btn-info btn-block ">Guardar</button>
+      </form>
+    </div>
+    <div class="col-7 bg-light p-4 ">
+      <ul class="nav nav-tabs " id="myTab " role="tablist ">
+        <li class="nav-item " role="presentation ">
+          <a class="nav-link active " id="home-tab " data-toggle="tab " href="#home " role="tab " aria-controls="home " aria-selected="true ">Tabla</a>
+        </li>
+        <li class="nav-item " role="presentation ">
+          <a class="nav-link " id="profile-tab " data-toggle="tab " href="#profile " role="tab " aria-controls="profile " aria-selected="false ">Graficos</a>
+        </li>
+      </ul>
+      <div class="tab-content " id="myTabContent ">
+        <div class="tab-pane fade show active " id="home " role="tabpanel " aria-labelledby="home-tab ">
+          solapa tabla
+        </div>
+        <div class="tab-pane fade " id="profile " role="tabpanel " aria-labelledby="profile-tab ">
+          <canvas id="myChart " width="400 " height="200 "></canvas>
+          solapa graficos
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0 "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
+    <script src="./js/chart.js "></script>
+    <script src="./js/main.js "></script>  
+  </body>
 </body>
 </html>
